@@ -5,7 +5,8 @@
   "main": "electron/main.js",
   "scripts": {
     "dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
-    "build": "tsc -p tsconfig.node.json && vite build && electron-builder",
+    "build": "vite build",
+    "build:electron": "tsc -p tsconfig.node.json && vite build && electron-builder",
     "compile:electron": "tsc -p tsconfig.node.json",
     "preview": "vite preview"
   },
